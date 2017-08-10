@@ -1,0 +1,114 @@
+------------------------------------------------------------------------------
+                               TO DO FILE
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+Decide if putting the test data used into it's own directory with sub-
+directories for the different areas or if going to be held in a "data" 
+directory either directly under 'tests' or under each test area sub-directory
+
+------------------------------------------------------------------------------
+Decide if renaming "utilities\util" to "common_utilities" or similar to work 
+around the weird issue where "\u" getting classed as some odd escape character 
+or similar and causing it to break
+ 
+------------------------------------------------------------------------------
+If do decide to do the above, add the file path to the header info in each of 
+the files created in the framework
+
+------------------------------------------------------------------------------
+Create proper set of asserts for the existing Login tests so that they operate
+as formal tests rather than the high level demo's they are currently set up as.
+
+------------------------------------------------------------------------------
+Create proper set of asserts for the existing Register for Course tests so 
+that they operate as formal tests rather than the high level demo's they are 
+currently set up as.  See if there is a logical split in these
+
+------------------------------------------------------------------------------
+Create navigation tests for all of the different navigation elements
+ - may want two of these, one for the navigation bar elements and another for  
+the User Settings as that is quite different and sectioned off part of the  
+site.
+
+To be utilised when creating a set of navigation tests
+    
+_user_back_icon = "//a[@class='nav-icon-back']/i"  # xpath    
+_user_left_profile = "Edit Profile" # linktext
+    
+    # //ul[@class='sidebar-nav']//i[@class='fa fa-user']
+    # should work if linktext above doesn't - are similar for other two options
+
+_user_left_subs = "Manage Subscriptions" # linktext
+_user_left_ccard = "Add / Change Credit Card" # linktext
+
+------------------------------------------------------------------------------
+Add title check validation for Course Registration and Login workflows..  
+  - I.e. When select a course and it brings up some of the course details but 
+    before you click on the "enrol" button; the page title changes to be the 
+    same as the course you are looking at, prefixed by "Let's Kode It"
+  - On same tests when get to the card details page it goes back to "Let's 
+    Kode It"
+
+------------------------------------------------------------------------------
+Add a new test for the register courses page to handle the "Free" courses as 
+these have a different workflow to the normal paid courses.
+
+------------------------------------------------------------------------------
+Need to convert the Login tests to use data driven tests and cover multiple 
+failure conditions for the login details (invalid email, password, no details, 
+etc.) 
+
+------------------------------------------------------------------------------
+Change the data driven testing so that it includes the expected error messages.
+Will work for the Login tests but will be more difficult for the course
+registration pages given the issues around the card details stuff
+
+------------------------------------------------------------------------------
+Set about re-adjusting all of the sleep added to the tests now that the two 
+variations on the "wait for element" action seems to be working
+
+------------------------------------------------------------------------------
+Create a new workflow for the register course page for where the person logged 
+in has a registered credit card.  Goes through a different process.
+
+------------------------------------------------------------------------------
+Create a new workflow in the register course page for using the PayPal option
+
+------------------------------------------------------------------------------
+Look at the register course page and see if having the card payment stuff as 
+part of those tests is a good way to do this or whether again these should be 
+in a separate page class.
+
+------------------------------------------------------------------------------
+Make additions to the Courses page to have tests for the filtering options,
+drop-downs, etc.
+
+------------------------------------------------------------------------------
+My Courses pages need updating to include tests for search in and selecting 
+entries on that page as well.
+
+------------------------------------------------------------------------------
+Practice page needs adding to the test suite; need to have validations and 
+asserts for the page elements and how they are meant to behave.
+
+------------------------------------------------------------------------------
+Update the SelniumDriver file, check elements exist methods to use same 
+"by_type" and "get_by_type()" behaviour as the other methods
+
+------------------------------------------------------------------------------
+Need to double-check through the "pages" modules and see if there are any 
+common methods being used that can get moved into the "base_page" module.
+Also need to have a think about what other actions may be common to all web 
+pages (e.g. would you want to verify headers. footers or other actions
+
+------------------------------------------------------------------------------
+Update temporary code in base\webdriverfactory.py when issue with Firefox and 
+maximising the window is resolved (expected in FF v55)
+
+------------------------------------------------------------------------------
+
+Register Courses Page - rename "verify_card_check_failed" to something better
+as bit naff
+
+------------------------------------------------------------------------------  
+------------------------------------------------------------------------------
