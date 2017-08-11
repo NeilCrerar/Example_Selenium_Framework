@@ -23,8 +23,8 @@ class NavigationPage(BasePage):
     ###########################################################################
 
     _website_logo = "//a[@class='navbar-brand header-logo']/img"  # xpath
-    _my_courses = "All Courses"  # linktext
-    _all_courses = "My Courses"  # linktext
+    _my_courses = "My Courses"  # linktext
+    _all_courses = "All Courses"  # linktext
     _practice = "Practice"  # linktext
     _user_settings = "//div[@id='navbar']//li[@class='dropdown']"  # xpath    
     _user_profile = "//div[@id='navbar']//a[@href='/current_user/profile']"  # xpath
@@ -56,6 +56,7 @@ class NavigationPage(BasePage):
                                         locator_type="linktext",
                                         timeout=10)
         self.element_click(locator=self._my_courses, locator_type="linktext")
+
 
     def navigate_to_all_courses(self):
         """

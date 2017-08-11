@@ -9,6 +9,7 @@ and especially in Chrome where test quicker than browser.
 """
 
 # Declare imports
+import os
 import unittest
 import pytest
 import time
@@ -21,7 +22,8 @@ from ddt import ddt, data, unpack
 @pytest.mark.usefixtures("one_time_setup", "setup")
 @ddt
 class RegisterCoursesCSVDataTests(unittest.TestCase):
-    test_data = "C:\\Users\\user\\workspace00\\Example_Selenium_Framework\\register_course_data.csv"
+    test_data = os.path.join("..", "register_course_data.csv")
+
 
     @pytest.fixture(autouse=True)
     def object_setup(self, one_time_setup):

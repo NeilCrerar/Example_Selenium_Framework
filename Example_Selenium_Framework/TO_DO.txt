@@ -110,5 +110,19 @@ maximising the window is resolved (expected in FF v55)
 Register Courses Page - rename "verify_card_check_failed" to something better
 as bit naff
 
+------------------------------------------------------------------------------
+
+Extract the config for the logging format out into a seperate file and put 
+under the "configfiles" directory
+
+------------------------------------------------------------------------------
+
+Add in a "test config" file that allows things like automatic creation of 
+screenshots on test failures to be turned on/off
+
+------------------------------------------------------------------------------
+
+Add in pytest HTML test reporting to the framework  
+
 ------------------------------------------------------------------------------  
 ------------------------------------------------------------------------------

@@ -1,1 +1,3 @@
-{}
+{
+  "test_suite_demo.py::LoginTests::test_valid_login": true
+}

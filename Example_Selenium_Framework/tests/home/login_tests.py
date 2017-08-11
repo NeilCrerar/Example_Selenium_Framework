@@ -24,7 +24,7 @@ class LoginTests(unittest.TestCase):
     def test_valid_login(self):
         
         self.lp.login("test@email.com", "abcabc")
-        result1 = self.lp.verify_title()
+        result1 = self.lp.verify_title("Let's Kode It")
         self.ts.mark(result1, "Webpage title check")
         result2 = self.lp.verify_login_success()
         self.ts.mark_final("test_valid_login", 
